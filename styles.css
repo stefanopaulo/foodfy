@@ -92,6 +92,10 @@ header .links a:hover {
     cursor: pointer;
 }
 
+.recipe-img img {
+    border-radius: 15px;
+}
+
 .recipe-info h2 {
     font-size: 18px;
     font-weight: normal;
