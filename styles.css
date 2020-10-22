@@ -25,11 +25,12 @@ header {
     align-items: center;
 }
 
-header h1 {
+header h1 a {
     font-family: serif;
     font-weight: normal;
     color: #111;
     margin-right: 120px;
+    text-decoration: none;
 }
 
 header .links a {
@@ -108,10 +109,27 @@ header .links a:hover {
     color: #777;
 }
 
+.about div h1 {
+    font-size: 24px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.about div p {
+    font-size: 18px;
+    color: #444;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
 footer {
     text-align: center;
     background-color: #eee;
     font-size: 14px;
     color: #999;
     padding: 23px;
+}
+
+a.active {
+    font-weight: 700;
 }
