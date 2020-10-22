@@ -26,9 +26,10 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get('/recipes/:id', (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    return res.send(id);
+    const { id } = req.params;
+    const info = data[id]; 
+
+    return res.render('details', { info });
 });
 
 app.listen(5000, () => console.log('server is running!'));

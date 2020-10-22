@@ -137,3 +137,69 @@ footer {
 a.active {
     font-weight: 700;
 }
+
+/* detalhes */
+
+.detail {
+    text-align: center;
+}
+
+.img-detail {
+    margin-bottom: 50px;
+}
+
+.img-detail img {
+    border-radius: 15px;
+}
+
+.detail-info {
+    margin-bottom: 50px;
+}
+
+.detail-info h1 {
+    font-size: 36px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.detail-info p {
+    font-size: 20px;
+    color: #777;
+}
+
+.detail-content > div {
+    margin-bottom: 50px;
+}
+
+.detail-content div p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444;
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 20px;
+    color: #111;
+    margin-right: 8px;
+}
+
+.title p.btn-action {
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ingredients ul {
+    font-size: 18px;
+    color: #444;
+    line-height: 28px;
+    list-style-position: inside;
+}
