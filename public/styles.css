@@ -203,3 +203,13 @@ a.active {
     line-height: 28px;
     list-style-position: inside;
 }
+
+/* div.action {
+    visibility: hidden;
+    opacity: 0;
+}
+
+div.action.active {
+    visibility: visible;
+    opacity: 1;
+} */

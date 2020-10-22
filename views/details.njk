@@ -4,6 +4,11 @@
     <title>Detalhe - {{info.title}}</title>
 {% endblock %}
 
+{% block links %}
+    <a href="/about">Sobre</a>
+    <a href="/recipes" class="active">Receita</a>
+{% endblock %}
+
 {% block content %}
     <section class="detail">
         <div class="img-detail">
@@ -20,10 +25,10 @@
         <div>
             <div class="title">
                 <h1>Ingredientes</h1>
-                <p class="btn-action">ESCONDER</p>
+                {# <p class="btn-action">mostrar</p> #}
             </div>
 
-            <div class="ingredients">
+            <div class="ingredients action">
                 <ul>
                     {% for ingredient in info.ingredients%}
                         <li>{{ingredient}}</li>
@@ -35,10 +40,10 @@
         <div>
             <div class="title">
                 <h1>Modo de preparo</h1>
-                <p class="btn-action">ESCONDER</p>
+                {# <p class="btn-action">mostrar</p> #}
             </div>
 
-            <div class="preparation">
+            <div class="action">
                 <p>{{info.preparation}}</p>
             </div>
         </div>
@@ -46,10 +51,10 @@
         <div>
             <div class="title">
                 <h1>Informações adicionais</h1>
-                <p class="btn-action">ESCONDER</p>
+                {# <p class="btn-action">mostrar</p> #}
             </div>
 
-            <div class="information">
+            <div class="action">
                 <p>{{info.information}}</p>
             </div>
         </div>
@@ -57,5 +62,5 @@
 {% endblock %}
 
 {% block script %}
-    {# <script src="/scripts.js"></script> #}
+    <script src="/scripts.js"></script>
 {% endblock %}

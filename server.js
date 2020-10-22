@@ -27,7 +27,7 @@ app.get('/recipes', (req, res) => {
 
 app.get('/recipes/:id', (req, res) => {
     const { id } = req.params;
-    const info = data[id]; 
+    const info = data[id - 1]; 
 
     return res.render('details', { info });
 });
