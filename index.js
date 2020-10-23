@@ -5,6 +5,8 @@ const path = require('path');
 
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
@@ -39,4 +41,4 @@ app.get('/recipes/:id', (req, res) => {
     return res.render('details', { info });
 });
 
-app.listen(5000, () => console.log('server is running!'));
+app.listen(port, () => console.log('server is running!'));
