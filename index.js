@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
 
-nunjucks.configure('views', {
+nunjucks.configure(path.join(__dirname, 'views'), {
     express: app,
     autoescape: false,
     noCache: true
