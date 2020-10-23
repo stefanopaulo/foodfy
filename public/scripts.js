@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.recipe');
-// const divAction = document.querySelectorAll('.action');
-// const btnAction = document.querySelectorAll('.btn-action');
+const btnActionIngredients = document.querySelector('.btn-action-ingredients');
+const btnActionPreparetion = document.querySelector('.btn-action-preparation');
+const btnActionInformation = document.querySelector('.btn-action-information');
 
 for (let card of cards) {
     card.addEventListener('click', function() {
@@ -10,16 +11,32 @@ for (let card of cards) {
     });
 }
 
-// for (let btn of btnAction) {
-//     btn.addEventListener('click', function() {
-//         for (let div of divAction) {
-//             if (div.classList.contains('active')) {
-//                 btn.innerText = 'mostrar';
-//                 div.classList.remove('active');
-//             } else {
-//                 btn.innerText = 'esconder';
-//                 div.classList.add('active');
-//             }
-//         }
-//     });
-// }
+function hideDiv(div) {
+    div.classList.toggle('hide');
+}
+
+function changeButton(btn, div) {
+    if (div.classList.contains('hide')) {
+        btn.innerText = 'mostrar';
+    } else {
+        btn.innerText = 'esconder';
+    }
+}
+
+btnActionIngredients.addEventListener('click', function() {
+    const ingredients = document.querySelector('.ingredients');
+    hideDiv(ingredients);
+    changeButton(btnActionIngredients, ingredients);
+});
+
+btnActionPreparetion.addEventListener('click', function() {
+    const preparation = document.querySelector('.preparation');
+    hideDiv(preparation);
+    changeButton(btnActionPreparetion, preparation);
+});
+
+btnActionInformation.addEventListener('click', function() {
+    const information = document.querySelector('.information');
+    hideDiv(information);
+    changeButton(btnActionInformation, information);
+});

@@ -25,10 +25,10 @@
         <div>
             <div class="title">
                 <h1>Ingredientes</h1>
-                {# <p class="btn-action">mostrar</p> #}
+                <p class="btn btn-action-ingredients">esconder</p>
             </div>
 
-            <div class="ingredients action">
+            <div class="ingredients">
                 <ul>
                     {% for ingredient in info.ingredients%}
                         <li>{{ingredient}}</li>
@@ -40,10 +40,10 @@
         <div>
             <div class="title">
                 <h1>Modo de preparo</h1>
-                {# <p class="btn-action">mostrar</p> #}
+                <p class="btn btn-action-preparation">esconder</p>
             </div>
 
-            <div class="action">
+            <div class="preparation">
                 <p>{{info.preparation}}</p>
             </div>
         </div>
@@ -51,10 +51,10 @@
         <div>
             <div class="title">
                 <h1>Informações adicionais</h1>
-                {# <p class="btn-action">mostrar</p> #}
+                <p class="btn btn-action-information">esconder</p>
             </div>
 
-            <div class="action">
+            <div class="information">
                 <p>{{info.information}}</p>
             </div>
         </div>
