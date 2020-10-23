@@ -1,13 +1,14 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const data = require('./data');
+const path = require('path');
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'njk');
 
-nunjucks.configure('views', {
+nunjucks.configure('views', path.join(__dirname, 'views'), {
     express: app,
     autoescape: false,
     noCache: true
