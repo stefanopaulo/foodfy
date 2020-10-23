@@ -27,6 +27,11 @@ app.get('/recipes', (req, res) => {
 
 app.get('/recipes/:id', (req, res) => {
     const { id } = req.params;
+
+    if (id > data.length || isNaN(id)) {
+        return res.status(404).send('página não encontrada');
+    }
+
     const info = data[id - 1]; 
 
     return res.render('details', { info });
